@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dryaomwvnh43y"]
+
+[ext_resource type="Script" uid="uid://c8g47dp4aa1ay" path="res://Entities/DynamicCrosshair/DynamicCrosshair.gd" id="1_4p17c"]
+[ext_resource type="Texture2D" uid="uid://c3glrvk5t4mu6" path="res://Entities/DynamicCrosshair/assets/hand_open.png" id="2_g4tbg"]
+
+[node name="DynamicCrosshair" type="Control" unique_id=1391021124 node_paths=PackedStringArray("sprite_2d")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4p17c")
+sprite_2d = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70351506]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_g4tbg")

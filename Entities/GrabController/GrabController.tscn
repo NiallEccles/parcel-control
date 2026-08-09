@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cipmorsh41fkb"]
+
+[ext_resource type="Script" uid="uid://beovm5xwnsgm7" path="res://Entities/GrabController/GrabController.gd" id="1_ojto7"]
+
+[node name="GrabController" type="Node3D" unique_id=1225909304]
+script = ExtResource("1_ojto7")

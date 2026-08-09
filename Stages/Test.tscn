@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b20rij64v020u"]
+
+[ext_resource type="PackedScene" uid="uid://cdawpdgh71s3d" path="res://Entities/Player/Player.tscn" id="1_2t5or"]
+[ext_resource type="Sky" uid="uid://rvgdfly32rcm" path="res://Entities/Sky/stylized_sky_01.tres" id="1_c5j3w"]
+[ext_resource type="Texture2D" uid="uid://dkkwgsq7ouibh" path="res://Textures/tiles_floor_1.png" id="2_wa1cp"]
+[ext_resource type="PackedScene" uid="uid://f2hssx2uytcy" path="res://Entities/Parcel/Parcel.tscn" id="3_dlw8r"]
+
+[sub_resource type="Environment" id="Environment_h5b61"]
+background_mode = 2
+sky = ExtResource("1_c5j3w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2tl5"]
+albedo_texture = ExtResource("2_wa1cp")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[node name="Test" type="Node3D" unique_id=1715687898]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1870773654]
+environment = SubResource("Environment_h5b61")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment" unique_id=428644209]
+transform = Transform3D(1, 0, 0, 0, -0.8669445, 0.49840483, 0, -0.49840483, -0.8669445, 0, 17.543804, 0)
+light_energy = 6.524
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=534494205]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1549302180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(50, 1, 50)
+material = SubResource("StandardMaterial3D_p2tl5")
+
+[node name="Player" parent="." unique_id=1502964589 instance=ExtResource("1_2t5or")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8985825, 0)
+
+[node name="Parcel" parent="." unique_id=1016689344 instance=ExtResource("3_dlw8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.231175, -4.2746577)
