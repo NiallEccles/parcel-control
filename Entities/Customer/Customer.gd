@@ -1,0 +1,50 @@
+extends CharacterBody3D
+
+@export var speed: float = 3.0
+@export var stopping_distance: float = 0.2
+
+var target_slot: Slot
+
+
+func _ready() -> void:
+	_find_available_slot()
+
+
+func _physics_process(_delta: float) -> void:
+	if target_slot == null:
+		_find_available_slot()
+		return
+
+	# The slot has somehow become occupied.
+	if target_slot.is_filled:
+		target_slot = null
+		return
+
+	var target_position: Vector3 = target_slot.global_position
+	var distance: float = global_position.distance_to(target_position)
+
+	if distance <= stopping_distance:
+		velocity = Vector3.ZERO
+		move_and_slide()
+
+		target_slot.is_filled = true
+		target_slot.is_reserved = false
+
+		return
+
+	var direction: Vector3 = global_position.direction_to(target_position)
+
+	velocity.x = direction.x * speed
+	velocity.z = direction.z * speed
+	velocity.y = 0.0
+
+	move_and_slide()
+
+
+func _find_available_slot() -> void:
+	target_slot = Bus.claim_first_available_slot()
+
+
+func _exit_tree() -> void:
+	if target_slot != null and not target_slot.is_filled:
+		Bus.release_slot(target_slot)

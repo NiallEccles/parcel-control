@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c5jof4e6ul0s5"]
+
+[ext_resource type="Script" uid="uid://ytvcngacbwqm" path="res://Entities/Customer/Customer.gd" id="1_p0mig"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h5b61"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax2dl"]
+albedo_color = Color(0.3372549, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_h5b61"]
+material = SubResource("StandardMaterial3D_ax2dl")
+
+[node name="Customer" type="CharacterBody3D" unique_id=1991619272]
+script = ExtResource("1_p0mig")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=448751478]
+shape = SubResource("CapsuleShape3D_h5b61")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1507671657]
+mesh = SubResource("CapsuleMesh_h5b61")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1079771624]
