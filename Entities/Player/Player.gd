@@ -50,29 +50,32 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 			
  #for logic about interacting with the switch and showing text
-	if interaction_ray.is_colliding():
-		dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.OPEN)
-		var collider = interaction_ray.get_collider()
-		if collider != current_target and collider.has_method('interact'):
-			if current_target:
-				#current_target.get_node("InteractLabel").visible = false
-				dynamic_crosshair.hide_crosshair()
+	#if interaction_ray.is_colliding():
+		#dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.OPEN)
+		#var collider = interaction_ray.get_collider()
+		#if collider != current_target and collider.has_method('interact'):
+			#if current_target:
+				##current_target.get_node("InteractLabel").visible = false
+				#dynamic_crosshair.hide_crosshair()
+#
+			##collider.get_node("InteractLabel").visible = true
+			#current_target = collider
+			#dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.OPEN)
+#
+	#else:
+		#if current_target:
+			##current_target.get_node("InteractLabel").visible = false
+			#current_target = null
+			#dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.DEFAULT)
+		#dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.DEFAULT)
 
-			#collider.get_node("InteractLabel").visible = true
-			current_target = collider
-			dynamic_crosshair.show_crosshair()
-	else:
-		if current_target:
-			#current_target.get_node("InteractLabel").visible = false
-			current_target = null
-			dynamic_crosshair.hide_crosshair()
 	
-	if Input.is_action_just_pressed("interact"):
-		if !interaction_ray.is_colliding():
-			return
-		
-		print('is colliding..')
-		var collider = interaction_ray.get_collider()
+	#if Input.is_action_just_pressed("interact"):
+		#if !interaction_ray.is_colliding():
+			#return
+		#
+		#print('is colliding..')
+		#var collider = interaction_ray.get_collider()
 
 	if Input.is_action_pressed('crouch'):
 		current_speed = crouch_speed

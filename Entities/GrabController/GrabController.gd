@@ -40,6 +40,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_throw()
 
 func _physics_process(_delta: float) -> void:
+	_update_crosshair()
+
 	if held_body == null:
 		return
 
@@ -65,7 +67,6 @@ func _try_grab() -> void:
 		_grab(collider)
 
 func _grab(body: RigidBody3D) -> void:
-	dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.HOLDING)
 	held_body = body
 	_saved_state = {
 		gravity_scale = body.gravity_scale,
@@ -85,7 +86,6 @@ func _grab(body: RigidBody3D) -> void:
 func _drop() -> void:
 	_restore_state(held_body)
 	held_body = null
-	dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.DEFAULT)
 
 func _throw() -> void:
 	var body := held_body
@@ -100,3 +100,23 @@ func _restore_state(body: RigidBody3D) -> void:
 	body.can_sleep = _saved_state.can_sleep
 	body.lock_rotation = _saved_state.lock_rotation
 	body.remove_collision_exception_with(player_body)
+	
+func _update_crosshair() -> void:
+	if held_body:
+		dynamic_crosshair.set_crosshair(
+			dynamic_crosshair.CROSSHAIRS.HOLDING
+		)
+		return
+
+	if ray.is_colliding():
+		var collider := ray.get_collider()
+
+		if collider is RigidBody3D \
+			and collider.is_in_group("grabbable") \
+			and collider.mass <= max_grab_mass:
+				dynamic_crosshair.set_crosshair(
+					dynamic_crosshair.CROSSHAIRS.OPEN
+				)
+				return
+			
+	dynamic_crosshair.set_crosshair(dynamic_crosshair.CROSSHAIRS.DEFAULT)

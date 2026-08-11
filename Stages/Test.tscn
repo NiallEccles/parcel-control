@@ -20,8 +20,8 @@ background_mode = 2
 sky = ExtResource("1_c5j3w")
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_h5b61"]
-vertices = PackedVector3Array(-6, 0.5, -21.37595, -3.75, 0.5, -21.62595, -3.75, 0.5, -33.62595, -24.5, 0.5, -33.62595, -24.5, 0.5, -19.37595, -6, 0.5, -19.37595, 11, 0.5, -21.62595, 11, 0.5, -33.62595, 13, 0.5, -21.62595, 13.25, 0.5, -19.87595, 24.5, 0.5, -20.12595, 24.5, 0.5, -33.62595, -5, 3.5, -20.62595, -5, 3.5, -20.12595, 12, 3.5, -20.12595, 12, 3.5, -20.62595, 13.25, 0.5, -7.12595, 24.5, 0.5, -6.87595, -24.5, 0.5, -7.62595, -6, 0.5, -7.62595, 1, 0.5, -18.37595, 2.5, 0.5, -18.37595, 2.25, 0.5, -19.37595, -3.75, 0.5, -19.37595, 0.25, 0.5, -6.37595, 2, 0.5, -6.37595, 2.25, 0.5, -7.62595, 0, 0.5, -7.62595, 0.75, 0.5, -16.87595, -3.75, 0.5, -7.62595, 4.25, 0.5, -16.62595, 4.25, 0.5, -7.62595, 7, 0.5, -18.12595, 11, 0.5, -19.37595, 6.75, 0.5, -16.62595, 11, 0.5, -7.62595, -6, 0.5, -5.87595, -24.5, 0.5, 15.37405, -6.25, 0.5, 15.37405, 0, 0.5, -5.37595, 2.25, 0.5, -5.37595, 13, 0.5, -5.37595, 24.5, 0.5, 15.37405, -5.75, 0.5, -5.37595, -5, 3.5, -6.87595, -5, 3.5, -6.37595, -0.75, 3.5, -6.37595, 3, 3.5, -6.62595, 12, 3.5, -6.37595, 12, 3.5, -6.87595)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(2, 7, 1), PackedInt32Array(1, 7, 6), PackedInt32Array(10, 9, 8), PackedInt32Array(8, 6, 7), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(9, 10, 16), PackedInt32Array(16, 10, 17), PackedInt32Array(4, 5, 18), PackedInt32Array(18, 5, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(24, 27, 25), PackedInt32Array(25, 27, 26), PackedInt32Array(27, 29, 28), PackedInt32Array(28, 29, 23), PackedInt32Array(27, 28, 26), PackedInt32Array(26, 28, 30), PackedInt32Array(28, 23, 20), PackedInt32Array(30, 31, 26), PackedInt32Array(21, 22, 32), PackedInt32Array(32, 22, 33), PackedInt32Array(31, 34, 35), PackedInt32Array(35, 34, 33), PackedInt32Array(34, 32, 33), PackedInt32Array(31, 30, 34), PackedInt32Array(19, 36, 18), PackedInt32Array(18, 36, 38), PackedInt32Array(18, 38, 37), PackedInt32Array(39, 24, 25), PackedInt32Array(25, 40, 39), PackedInt32Array(39, 40, 38), PackedInt32Array(16, 17, 41), PackedInt32Array(41, 17, 42), PackedInt32Array(38, 36, 43), PackedInt32Array(38, 43, 39), PackedInt32Array(40, 41, 38), PackedInt32Array(38, 41, 42), PackedInt32Array(46, 45, 44), PackedInt32Array(49, 48, 47)]
+vertices = PackedVector3Array(-3, 0.5, -19.37595, -0.75, 0.5, -19.62595, -0.75, 0.5, -33.62595, -24.5, 0.5, -33.62595, -24.5, 0.5, -17.37595, -3, 0.5, -17.37595, 8, 0.5, -19.62595, 8, 0.5, -33.62595, 10, 0.5, -19.62595, 10.25, 0.5, -17.87595, 24.5, 0.5, -18.12595, 24.5, 0.5, -33.62595, -2, 3.5, -18.62595, -2, 3.5, -18.12595, 9, 3.5, -18.12595, 9, 3.5, -18.62595, 10.25, 0.5, -7.12595, 24.5, 0.5, -6.87595, -24.5, 0.5, -7.62595, -3, 0.5, -7.62595, 7, 0.5, -14.87595, 6.5, 0.5, -14.62595, 8, 0.5, -14.37595, -0.75, 0.5, -15.12595, 0.75, 0.5, -15.12595, 1, 0.5, -16.37595, -0.75, 0.5, -17.37595, 6.75, 0.5, -16.37595, 8, 0.5, -17.37595, 1, 0.5, -14.62595, -0.75, 0.5, -7.62595, 0.25, 0.5, -7.37595, 2.25, 0.5, -7.62595, 0.25, 0.5, -6.37595, 2, 0.5, -6.37595, 8, 0.5, -7.62595, -3, 0.5, -5.87595, -24.5, 0.5, 15.37405, -3.25, 0.5, 15.37405, 10.25, 0.5, -5.87595, 10.5, 0.5, 15.37405, 24.5, 0.5, 15.37405, -2, 3.5, -6.87595, -2, 3.5, -6.37595, -0.75, 3.5, -6.37595, 3, 3.5, -6.62595, 9, 3.5, -6.37595, 9, 3.5, -6.87595, 2.25, 0.5, -5.37595, 0, 0.5, -5.37595, 10, 0.5, -5.37595, -2.75, 0.5, -5.37595)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(0, 5, 4), PackedInt32Array(2, 7, 1), PackedInt32Array(1, 7, 6), PackedInt32Array(8, 6, 7), PackedInt32Array(10, 9, 8), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(9, 10, 16), PackedInt32Array(16, 10, 17), PackedInt32Array(4, 5, 18), PackedInt32Array(18, 5, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(27, 25, 28), PackedInt32Array(28, 25, 26), PackedInt32Array(20, 27, 22), PackedInt32Array(22, 27, 28), PackedInt32Array(24, 29, 23), PackedInt32Array(23, 29, 30), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 32), PackedInt32Array(33, 31, 34), PackedInt32Array(34, 31, 32), PackedInt32Array(21, 22, 29), PackedInt32Array(29, 22, 32), PackedInt32Array(32, 22, 35), PackedInt32Array(19, 36, 18), PackedInt32Array(18, 36, 38), PackedInt32Array(18, 38, 37), PackedInt32Array(16, 17, 39), PackedInt32Array(39, 17, 40), PackedInt32Array(40, 17, 41), PackedInt32Array(44, 43, 42), PackedInt32Array(47, 46, 45), PackedInt32Array(34, 48, 33), PackedInt32Array(33, 48, 49), PackedInt32Array(49, 48, 38), PackedInt32Array(50, 40, 48), PackedInt32Array(48, 40, 38), PackedInt32Array(40, 50, 39), PackedInt32Array(38, 36, 51), PackedInt32Array(38, 51, 49)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3cco"]
 albedo_texture = ExtResource("2_jgxij")
@@ -80,46 +80,46 @@ size = Vector3(50, 1, 50)
 material = SubResource("StandardMaterial3D_t3cco")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1549302180]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.44599771, 5)
-size = Vector3(18, 1, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -0.4972644, 6.5)
+size = Vector3(12, 1, 12)
 material = SubResource("StandardMaterial3D_p2tl5")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=518553586]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, 5)
-size = Vector3(1, 3, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, 6)
+size = Vector3(1, 3, 13)
 material = SubResource("StandardMaterial3D_h5b61")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1849613478]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1.5, 5)
-size = Vector3(1, 3, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.5, 6)
+size = Vector3(1, 3, 13)
 material = SubResource("StandardMaterial3D_h5b61")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=1552186669]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 1.5, -2)
-size = Vector3(1, 3, 18)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 1.5, 0)
+size = Vector3(1, 3, 12)
 material = SubResource("StandardMaterial3D_h5b61")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=36917204]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 1.5, 12)
-size = Vector3(1, 3, 18)
+size = Vector3(1, 3, 12)
 material = SubResource("StandardMaterial3D_h5b61")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=301273308]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7713633, 0.48469114, 1.1643028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7713633, 0.48469114, 3.1643028)
 size = Vector3(5, 1, 0.5)
 material = SubResource("StandardMaterial3D_87xut")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D" unique_id=487346845]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0267944, 1.60289, 12.0221615)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.361407, 1.5019879, 11.928013)
 operation = 2
-size = Vector3(3.0535889, 3.1929016, 1.2578125)
+size = Vector3(2.2330284, 3.0060391, 1.2578125)
 material = SubResource("StandardMaterial3D_iykkq")
 
 [node name="Player" parent="." unique_id=1502964589 instance=ExtResource("1_2t5or")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8985825, -10.702091)
 
 [node name="Parcel" parent="." unique_id=1016689344 instance=ExtResource("3_dlw8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4590673, 2.231175, -12.888226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8126936, 2.231175, -12.888226)
 
 [node name="SlotManager" type="Node3D" parent="." unique_id=1798185367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6951137, 0, -16.264925)

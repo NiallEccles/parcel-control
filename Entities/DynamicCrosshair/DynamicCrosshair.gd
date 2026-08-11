@@ -19,7 +19,7 @@ const crosshair_assets = [
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#sprite_2d.visible = false
-	sprite_2d.texture = crosshair_assets[CROSSHAIRS.OPEN]
+	sprite_2d.texture = crosshair_assets[CROSSHAIRS.DEFAULT]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

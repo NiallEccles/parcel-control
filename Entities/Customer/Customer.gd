@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var speed: float = 3.0
 @export var stopping_distance: float = 0.2
+@export var gravity: float = 9.8
 
 var target_slot: Slot
 
@@ -10,7 +11,7 @@ func _ready() -> void:
 	_find_available_slot()
 
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if target_slot == null:
 		_find_available_slot()
 		return
@@ -24,7 +25,15 @@ func _physics_process(_delta: float) -> void:
 	var distance: float = global_position.distance_to(target_position)
 
 	if distance <= stopping_distance:
-		velocity = Vector3.ZERO
+		velocity.x = 0.0
+		velocity.z = 0.0
+
+		# Keep gravity active while stopped.
+		if not is_on_floor():
+			velocity.y -= gravity * delta
+		else:
+			velocity.y = 0.0
+
 		move_and_slide()
 
 		target_slot.is_filled = true
@@ -32,11 +41,17 @@ func _physics_process(_delta: float) -> void:
 
 		return
 
+	# Move toward the target slot.
 	var direction: Vector3 = global_position.direction_to(target_position)
 
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
-	velocity.y = 0.0
+
+	# Apply gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0.0
 
 	move_and_slide()
 
