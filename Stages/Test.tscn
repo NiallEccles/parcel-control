@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cdawpdgh71s3d" path="res://Entities/Player/Player.tscn" id="1_2t5or"]
 [ext_resource type="Sky" uid="uid://rvgdfly32rcm" path="res://Entities/Sky/stylized_sky_01.tres" id="1_c5j3w"]
+[ext_resource type="PackedScene" uid="uid://c4qykcm8sbghu" path="res://Entities/WeighStation/WeighStation.tscn" id="1_pbni0"]
 [ext_resource type="Texture2D" uid="uid://depw5hkhyuxf8" path="res://Textures/grass_7.png" id="2_jgxij"]
 [ext_resource type="Texture2D" uid="uid://dkkwgsq7ouibh" path="res://Textures/tiles_floor_1.png" id="2_wa1cp"]
 [ext_resource type="PackedScene" uid="uid://f2hssx2uytcy" path="res://Entities/Parcel/Parcel.tscn" id="3_dlw8r"]
@@ -58,6 +59,9 @@ uv1_triplanar = true
 albedo_texture = ExtResource("4_35iaf")
 
 [node name="Test" type="Node3D" unique_id=1715687898]
+
+[node name="Area3D" parent="." unique_id=106381782 instance=ExtResource("1_pbni0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5138583, 0.630805, -12.808245)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1870773654]
 environment = SubResource("Environment_h5b61")
@@ -121,6 +125,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8985825, -10.702091)
 [node name="Parcel" parent="." unique_id=1016689344 instance=ExtResource("3_dlw8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8126936, 2.231175, -12.888226)
 
+[node name="Parcel2" parent="." unique_id=1663658643 instance=ExtResource("3_dlw8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4240847, 2.231175, -10.713012)
+mass = 17.0
+
 [node name="SlotManager" type="Node3D" parent="." unique_id=1798185367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6951137, 0, -16.264925)
 script = ExtResource("12_iykkq")
@@ -133,8 +141,13 @@ script = ExtResource("13_87xut")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47037315, 0, 4.4434137)
 script = ExtResource("13_87xut")
 
-[node name="Customer" parent="." unique_id=1991619272 instance=ExtResource("14_178t1")]
+[node name="Customer" parent="." unique_id=1991619272 groups=["customer"] instance=ExtResource("14_178t1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.130332, 0)
+wants = "I need my mail"
 
-[node name="Customer2" parent="." unique_id=1520729925 instance=ExtResource("14_178t1")]
+[node name="Customer2" parent="." unique_id=1520729925 groups=["customer"] instance=ExtResource("14_178t1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7955198, 1.7734137, 1.128355)
+wants = "I need a Ferrari"
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
