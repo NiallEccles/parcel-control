@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlygm3kpipbc3" path="res://Entities/Player/Player.gd" id="1_e5kic"]
 [ext_resource type="PackedScene" uid="uid://dryaomwvnh43y" path="res://Entities/DynamicCrosshair/DynamicCrosshair.tscn" id="2_vweq0"]
 [ext_resource type="PackedScene" uid="uid://cipmorsh41fkb" path="res://Entities/GrabController/GrabController.tscn" id="2_ww0jn"]
+[ext_resource type="PackedScene" uid="uid://b18tmypspxs8v" path="res://Entities/InteractController/InteractController.tscn" id="4_1des2"]
 
 [sub_resource type="Resource" id="Resource_e5kic"]
 metadata/__load_path__ = "res://Entities/Player/SFX/button_flashlight_1.ogg"
@@ -50,6 +51,13 @@ shape = SubResource("CapsuleShape3D_u36tg")
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0.08115476, 0)
 
 [node name="GrabController" parent="." unique_id=1225909304 node_paths=PackedStringArray("camera", "ray", "hold_point", "player_body", "dynamic_crosshair") instance=ExtResource("2_ww0jn")]
+camera = NodePath("../Head/Camera3D")
+ray = NodePath("../Head/Camera3D/InteractionRay")
+hold_point = NodePath("../Head/Camera3D/HoldPoint")
+player_body = NodePath("..")
+dynamic_crosshair = NodePath("../Head/Camera3D/CanvasLayer/DynamicCrosshair")
+
+[node name="InteractController" parent="." unique_id=641411549 node_paths=PackedStringArray("camera", "ray", "hold_point", "player_body", "dynamic_crosshair") instance=ExtResource("4_1des2")]
 camera = NodePath("../Head/Camera3D")
 ray = NodePath("../Head/Camera3D/InteractionRay")
 hold_point = NodePath("../Head/Camera3D/HoldPoint")
