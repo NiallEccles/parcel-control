@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b18tmypspxs8v"]
+
+[ext_resource type="Script" uid="uid://etnk1lx3xha5" path="res://Entities/InteractController/InteractController.gd" id="1_uqyod"]
+
+[node name="InteractController" type="Node3D" unique_id=641411549]
+script = ExtResource("1_uqyod")
