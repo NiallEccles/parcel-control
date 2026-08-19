@@ -5,13 +5,15 @@ extends Node
 enum CROSSHAIRS {
 	OPEN,
 	HOLDING,
-	DEFAULT
+	DEFAULT,
+	ASK
 }
 
 const crosshair_assets = [
 	preload("res://Entities/DynamicCrosshair/assets/hand_open.png"),
 	preload("res://Entities/DynamicCrosshair/assets/hand_closed.png"),
-	preload("res://Entities/DynamicCrosshair/assets/dot_large.png")
+	preload("res://Entities/DynamicCrosshair/assets/dot_large.png"),
+	preload("res://Entities/DynamicCrosshair/assets/message_dots_round.png")
 ]
 
 @export var sprite_2d: Sprite2D
