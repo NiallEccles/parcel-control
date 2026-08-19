@@ -3,12 +3,18 @@ extends CharacterBody3D
 @export var speed: float = 3.0
 @export var stopping_distance: float = 0.2
 @export var gravity: float = 9.8
+@export var bubble: Sprite3D
+@export var bubble_text: Label
+
+@export var wants: String
 
 var target_slot: Slot
+var was_interacted: bool = false
 
 
 func _ready() -> void:
 	_find_available_slot()
+	bubble.visible = false
 
 
 func _physics_process(delta: float) -> void:
@@ -59,7 +65,18 @@ func _physics_process(delta: float) -> void:
 func _find_available_slot() -> void:
 	target_slot = Bus.claim_first_available_slot()
 
-
 func _exit_tree() -> void:
 	if target_slot != null and not target_slot.is_filled:
 		Bus.release_slot(target_slot)
+		
+func interact() -> void:
+	if was_interacted:
+		bubble_text.text = 'Uhh I already told you...'
+	else:
+		bubble_text.text = wants
+		was_interacted = true
+	
+	show_bubble()
+		
+func show_bubble() -> void:
+	bubble.visible = true
